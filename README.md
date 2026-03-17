@@ -1,6 +1,7 @@
-# Ecosys Modeling of Carbon Fluxes at Old Woman Creek NERR
+# Ecosys Modeling of Carbon Fluxes at Old Woman Creek NERR, Huron, Ohio, USA
 
 ## Overview
+This manuscript has been accepted in Science of the Total Environment; Februrary 2026. 
 
 This project uses the **process-based ecosystem model Ecosys** to simulate carbon gas fluxes (CO₂ and CH₄) in a temperate freshwater marsh at **Old Woman Creek National Estuarine Research Reserve (OWC NERR), Huron, Ohio, USA**.  
 
@@ -53,22 +54,20 @@ The project aims to:
 
 - Hassett E ; Villa J ; Onyango Y ; Eberhard E ; Bohrer G ; Kinsman-Costello L ; Morin T (2023)  
   Carbon flux measurements from chambers collected between July–October 2022 at Old Woman Creek, Huron, Ohio.  
-  ESS-DIVE Dataset  
-  https://doi.org/10.15485/2229438
+  ESS-DIVE Dataset https://doi.org/10.15485/2229438
 
 - Hassett E ; Villa J ; Bohrer G ; Kinsman-Costello L ; Eberhard E ; Carnevali J ; Brown M ; Martin S ; Morin T (2025)  
   Carbon flux measurements from chambers collected between April–October 2023 at Old Woman Creek, Huron, Ohio.  
-  ESS-DIVE Dataset  
-  https://doi.org/10.15485/3003419
+  ESS-DIVE Dataset https://doi.org/10.15485/3003419
 
-### Eddy Covariance Data
+### Eddy Covariance Data from Ameriflux Site- OWC
 
 - Bohrer, G., & Kerns, J. (2024)  
   AmeriFlux BASE US-OWC Old Woman Creek, Ver. 5-5  
   AmeriFlux AMP Dataset  
   https://doi.org/10.17190/AMF/1418679
 
-### Supporting Publication
+### Supporting Publications
 
 - Hassett, Erin, Gil Bohrer, Lauren Kinsman-Costello, Yvette Onyango, Talia Pope, Chelsea Smith, Justine Missik et al. "Changes in inundation drive carbon dioxide and methane fluxes in a temperate wetland." Science of the Total Environment 915 (2024): 170089.
 - Morin, Timothy H., William J. Riley, Robert F. Grant, Zelalem Mekonnen, Kay C. Stefanik, A. Camilo Rey Sanchez, Molly A. Mulhare, Jorge Villa, Kelly Wrighton, and Gil Bohrer. "Water level changes in Lake Erie drive 21st century CO2 and CH4 fluxes from a coastal temperate wetland." Science of the Total Environment 821 (2022): 153087.
@@ -122,7 +121,7 @@ ecosys_carbon/
     ├── trial_parameters_ch4.csv
     └── trial_parameters_co2.csv
 ```
-## File description
+## File descriptions
 
 `Cove`: Run files from modeling carbon fluxes from the cove area at Old Woman Creek
 - hourly carbon fles produced from ecosys in the plant (02010) and non-plant (03010) cells in 2022 and 2023.
