@@ -8,10 +8,10 @@ Wetland heterogeneity in hydrology and vegetation strongly influences biogeochem
 
 The study focused on **two hydrologically distinct areas** of the marsh:
 
-1. **Main pool** – deeper, frequently flooded  
-2. **Cove** – shallower, intermittently drying  
+1. **Main pool** – deeper, predominantly flooded  
+2. **Cove** – shallower, intermittently dried  
 
-Multiple grid cells were used to represent heterogeneity and capture site-specific processes.
+Multiple grid cells were used to represent heterogeneity and capture site-specific processes in each area.
 
 ---
 
@@ -19,7 +19,7 @@ Multiple grid cells were used to represent heterogeneity and capture site-specif
 
 The project aims to:
 
-- Simulate ecosystem carbon gas fluxes (CO₂ and CH₄) using **Ecosys** from **2015–2023**, updated from previous evaluations that only observed the main pool from 2015 and 2016.
+- Simulate ecosystem carbon gas fluxes (CO₂ and CH₄) using **ecosys** from **2015–2023**, updated from previous evaluations that only observed the main pool from 2015 and 2016.
 - Evaluate model performance against **eddy covariance data** from the main pool (2015–2023) and **chamber flux measurements** from the cove (2022–2023).
 - Use **Bayesian Optimization for Anything (BOA)** to derive optimized parameters for CO₂ and CH₄ processes in each zone.
 - Assess the importance of **site-specific parameterization** and **multi-grid cell modeling** in reproducing observed flux patterns.
@@ -87,4 +87,55 @@ The project aims to:
 ---
 
 ## Repository Structure
+```
+ecosys_carbon/
+├── README.md
+├── cove/
+│   ├── 020102022hc
+│   ├── 020102023hc
+│   ├── 030102022hc
+│   ├── 030102023hc
+│   ├── before_parameterization/
+│   │   ├── 020102022hc
+│   │   ├── 020102023hc
+│   │   ├── 030102022hc
+│   │   └── 030102023hc
+│   ├── cove.Rmd
+│   ├── open_obs_ecosys2.csv
+│   ├── open_obs_ecosys2_CHANNEL.csv
+│   ├── plant_obs_ecosys2.csv
+│   ├── plant_obs_ecosys2_CHANNEL.csv
+│   ├── soilrespiration_data22.csv
+│   ├── soilrespiration_data23.csv
+│   ├── trial_params_cove_CH4.csv
+│   └── trial_params_cove_CO2.csv
+├── flux_processing/
+│   ├── Chamber_Timing_Check_ERIN.m
+│   ├── ImportMetaDataSheet.m
+│   ├── ProcessLI7810Chamber.m
+│   ├── ReadLI7810.m
+│   └── main.m
+└── main_pool/
+    ├── channel_ch4.Rmd
+    ├── footprint_all.csv
+    ├── obs_data.csv
+    ├── trial_parameters_ch4.csv
+    └── trial_parameters_co2.csv
+```
+## File description
 
+`Cove`: Run files from modeling carbon fluxes from the cove area at Old Woman Creek
+- hourly carbon fles produced from ecosys in the plant (02010) and non-plant (03010) cells in 2022 and 2023.
+- cove.rmd: R markdown file for processing and comparing ecosys model carbon fluxes and observed carbon fluxes (from eddy covariance flux tower on Ameriflux and chamber data). Note: files loaded into R but not present here are too large to upload to GitHub. Contact erhasset@syr.edu to acquire any missing datasets. 
+- soilrespiration22 and soilrespiration23: final carbon fluxes from chambers collected in 2022 and 2023, with datasets published on ESS-DIVE
+- trial_params_cove_CH4 and CO2: BOA output trials with RMSE
+- before_parameterization`: hourly carbon text files from the plant cells (02010) and from the non-plant celss (03010) in 2022 and 2023, using final parameter values generated from BOA based on the main pool paramterization
+
+`Main Pool`: Run files from modeling carbon fluxes from the main pool area at Old Woman Creek
+- channel_ch4.Rmd: code for comparing ecosys model carbon fluxes to observed eddy covariance data 
+- footprint_all.csv: footprint model output results for understanding the fetch of the eddy covariance tower
+- obs_data.csv: observed data from Ameriflux
+- trial_parameters_ch4.csv; trial_parameters_co2.csv: BOA output trials with RMSE
+
+`Flux Processing`: Chamber flux processing in Matlab
+- Data sheets for calculating carbon fluxes from the chambers colleted from OWC in 2023.
