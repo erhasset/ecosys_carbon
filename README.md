@@ -1,11 +1,11 @@
 # Ecosys Modeling of Carbon Fluxes at Old Woman Creek NERR, Huron, Ohio, USA
 
 ## Overview
-This manuscript has been accepted in Science of the Total Environment; Februrary 2026. 
+This manuscript has been accepted, pending revisions, in Science of the Total Environment; Februrary 2026. 
 
-This project uses the **process-based ecosystem model Ecosys** to simulate carbon gas fluxes (CO₂ and CH₄) in a temperate freshwater marsh at **Old Woman Creek National Estuarine Research Reserve (OWC NERR), Huron, Ohio, USA**.  
+This project uses the **process-based ecosystem model ecosys** to simulate carbon gas fluxes (CO₂ and CH₄) in a temperate freshwater marsh at **Old Woman Creek National Estuarine Research Reserve (OWC NERR), Huron, Ohio, USA**.  
 
-Wetland heterogeneity in hydrology and vegetation strongly influences biogeochemical processes. Since wetlands store significant global organic carbon and contribute substantially to methane emissions, accurately modeling these dynamics across space and time is critical.  
+Wetland heterogeneity in hydrology and vegetation strongly influences biogeochemical processes. Since wetlands store significant global organic carbon and contribute substantially to global methane emissions, accurately modeling these dynamics across space and time is critical.  
 
 The study focused on **two hydrologically distinct areas** of the marsh:
 
@@ -20,7 +20,7 @@ Multiple grid cells were used to represent heterogeneity and capture site-specif
 
 The project aims to:
 
-- Simulate ecosystem carbon gas fluxes (CO₂ and CH₄) using **ecosys** from **2015–2023**, updated from previous evaluations that only observed the main pool from 2015 and 2016.
+- Simulate carbon gas fluxes (CO₂ and CH₄) using **ecosys** from **2015–2023**, updated from previous evaluations that only observed the main pool carbon fluxes from 2015 and 2016.
 - Evaluate model performance against **eddy covariance data** from the main pool (2015–2023) and **chamber flux measurements** from the cove (2022–2023).
 - Use **Bayesian Optimization for Anything (BOA)** to derive optimized parameters for CO₂ and CH₄ processes in each zone.
 - Assess the importance of **site-specific parameterization** and **multi-grid cell modeling** in reproducing observed flux patterns.
@@ -70,13 +70,14 @@ The project aims to:
 ### Supporting Publications
 
 - Hassett, Erin, Gil Bohrer, Lauren Kinsman-Costello, Yvette Onyango, Talia Pope, Chelsea Smith, Justine Missik et al. "Changes in inundation drive carbon dioxide and methane fluxes in a temperate wetland." Science of the Total Environment 915 (2024): 170089.
+
 - Morin, Timothy H., William J. Riley, Robert F. Grant, Zelalem Mekonnen, Kay C. Stefanik, A. Camilo Rey Sanchez, Molly A. Mulhare, Jorge Villa, Kelly Wrighton, and Gil Bohrer. "Water level changes in Lake Erie drive 21st century CO2 and CH4 fluxes from a coastal temperate wetland." Science of the Total Environment 821 (2022): 153087.
 
 ---
 
 ## Tools and Software
 
-- **Ecosys** – process-based ecosystem model for carbon flux simulations  
+- **ecosys** – process-based ecosystem model for carbon flux simulations  
   Source code: [Ecosys GitHub Repository](https://github.com/jinyun1tang/ECOSYS)
 
 - **Bayesian Optimization for Anything (BOA)** – used for parameter optimization  
